@@ -167,13 +167,6 @@
 <library>
 <packages>
 <package name="QFN16" urn="urn:adsk.eagle:footprint:21050/1" locally_modified="yes">
-<description>&lt;b&gt;STUSB4710&lt;/b&gt;
-&lt;p&gt;
-Autonomous USB PD controller with integrated discharge path
-&lt;/p&gt;
-&lt;p&gt;
-Package: QFN16 3x3 mm
-&lt;/p&gt;</description>
 <wire x1="-1.5" y1="1.5" x2="1.5" y2="1.5" width="0.1016" layer="51"/>
 <wire x1="1.5" y1="1.5" x2="1.5" y2="-1.5" width="0.1016" layer="51"/>
 <wire x1="1.5" y1="-1.5" x2="-1.5" y2="-1.5" width="0.1016" layer="51"/>
@@ -239,13 +232,6 @@ Package: QFN16 3x3 mm
 <rectangle x1="-0.9625" y1="1.2625" x2="-0.5375" y2="1.5125" layer="31" rot="R270"/>
 </package>
 <package name="QFN24EP" urn="urn:adsk.eagle:footprint:21045/1" locally_modified="yes">
-<description>&lt;b&gt;STUSB4710&lt;/b&gt;
-&lt;p&gt;
-Autonomous USB PD controller with integrated discharge path
-&lt;/p&gt;
-&lt;p&gt;
-Package: QFN24EP 4x4 mm
-&lt;/p&gt;</description>
 <wire x1="-1.95" y1="-1.95" x2="-1.95" y2="1.95" width="0.2032" layer="51"/>
 <wire x1="-1.95" y1="1.95" x2="1.95" y2="1.95" width="0.2032" layer="51"/>
 <wire x1="1.95" y1="1.95" x2="1.95" y2="-1.95" width="0.2032" layer="51"/>
@@ -288,13 +274,6 @@ Package: QFN24EP 4x4 mm
 <text x="-2.032" y="-3.81" size="1.27" layer="27">&gt;VALUE</text>
 </package>
 <package name="SO-16">
-<description>&lt;b&gt;STUSB4710&lt;/b&gt;
-&lt;p&gt;
-Autonomous USB PD controller with integrated discharge path
-&lt;/p&gt;
-&lt;p&gt;
-Package: SO-16
-&lt;/p&gt;</description>
 <wire x1="-4.9022" y1="-1.8542" x2="4.9022" y2="-1.8542" width="0.1524" layer="21"/>
 <wire x1="4.9022" y1="-1.8542" x2="4.9022" y2="1.7272" width="0.1524" layer="21"/>
 <wire x1="4.9022" y1="1.7272" x2="-4.9022" y2="1.7272" width="0.1524" layer="21"/>
@@ -393,7 +372,7 @@ Package: SO-16
 </symbols>
 <devicesets>
 <deviceset name="STUSB4710AQTR">
-<description>&lt;b&gt;STUSB4710&lt;/b&gt;
+<description>&lt;b&gt;STUSB4710AQTR&lt;/b&gt;
 &lt;p&gt;
 Autonomous USB PD controller with integrated discharge path
 &lt;/p&gt;</description>
@@ -427,8 +406,8 @@ Autonomous USB PD controller with integrated discharge path
 </device>
 </devices>
 </deviceset>
-<deviceset name="STUSB4710">
-<description>&lt;b&gt;STUSB4710&lt;/b&gt;
+<deviceset name="STUSB4710AQ1TR">
+<description>&lt;b&gt;STUSB4710AQ1TR&lt;/b&gt;
 &lt;p&gt;
 Autonomous USB PD controller with integrated discharge path
 &lt;/p&gt;</description>
@@ -436,30 +415,7 @@ Autonomous USB PD controller with integrated discharge path
 <gate name="G$1" symbol="STUSB4710" x="-10.16" y="15.24"/>
 </gates>
 <devices>
-<device name="ADTR" package="SO-16">
-<connects>
-<connect gate="G$1" pin="ADDR0" pad="7"/>
-<connect gate="G$1" pin="CC1" pad="16"/>
-<connect gate="G$1" pin="CC2" pad="1"/>
-<connect gate="G$1" pin="GND" pad="4"/>
-<connect gate="G$1" pin="SCL" pad="2"/>
-<connect gate="G$1" pin="SDA" pad="3"/>
-<connect gate="G$1" pin="SEL_PDO2" pad="6"/>
-<connect gate="G$1" pin="SEL_PDO3" pad="5"/>
-<connect gate="G$1" pin="SEL_PDO4" pad="8"/>
-<connect gate="G$1" pin="SEL_PDO5" pad="9"/>
-<connect gate="G$1" pin="VBUS_DISCH" pad="11"/>
-<connect gate="G$1" pin="VBUS_EN_SRC" pad="12"/>
-<connect gate="G$1" pin="VBUS_SENSE" pad="10"/>
-<connect gate="G$1" pin="VDD" pad="15"/>
-<connect gate="G$1" pin="VREG_1V2" pad="13"/>
-<connect gate="G$1" pin="VREG_2V7" pad="14"/>
-</connects>
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-<device name="AQ1TR" package="QFN16">
+<device name="" package="QFN16">
 <connects>
 <connect gate="G$1" pin="ADDR0" pad="9"/>
 <connect gate="G$1" pin="CC1" pad="2"/>
@@ -477,6 +433,40 @@ Autonomous USB PD controller with integrated discharge path
 <connect gate="G$1" pin="VDD" pad="1"/>
 <connect gate="G$1" pin="VREG_1V2" pad="15"/>
 <connect gate="G$1" pin="VREG_2V7" pad="16"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="STUSB4710ADTR">
+<description>&lt;b&gt;STUSB4710ADTR&lt;/b&gt;
+&lt;p&gt;
+Autonomous USB PD controller with integrated discharge path
+&lt;/p&gt;</description>
+<gates>
+<gate name="G$1" symbol="STUSB4710" x="-10.16" y="15.24"/>
+</gates>
+<devices>
+<device name="" package="SO-16">
+<connects>
+<connect gate="G$1" pin="ADDR0" pad="7"/>
+<connect gate="G$1" pin="CC1" pad="16"/>
+<connect gate="G$1" pin="CC2" pad="1"/>
+<connect gate="G$1" pin="GND" pad="4"/>
+<connect gate="G$1" pin="SCL" pad="2"/>
+<connect gate="G$1" pin="SDA" pad="3"/>
+<connect gate="G$1" pin="SEL_PDO2" pad="6"/>
+<connect gate="G$1" pin="SEL_PDO3" pad="5"/>
+<connect gate="G$1" pin="SEL_PDO4" pad="8"/>
+<connect gate="G$1" pin="SEL_PDO5" pad="9"/>
+<connect gate="G$1" pin="VBUS_DISCH" pad="11"/>
+<connect gate="G$1" pin="VBUS_EN_SRC" pad="12"/>
+<connect gate="G$1" pin="VBUS_SENSE" pad="10"/>
+<connect gate="G$1" pin="VDD" pad="15"/>
+<connect gate="G$1" pin="VREG_1V2" pad="13"/>
+<connect gate="G$1" pin="VREG_2V7" pad="14"/>
 </connects>
 <technologies>
 <technology name=""/>
